@@ -58,7 +58,7 @@ if ($result) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Fruit Quiz Game</title>
+    <title>Vegetable Quiz Game</title>
     <style>
         body {
             font-family: system-ui, -apple-system, sans-serif;
@@ -87,6 +87,7 @@ if ($result) {
             text-align: center;
             color: #666;
             margin-bottom: 25px;
+            font-size: 26px;
         }
 
         .choices {
@@ -218,7 +219,9 @@ if ($result) {
 <body>
     <?php if (!isset($_SESSION['game_started']) && !isset($_GET['show_results'])): ?>
         <div class="game-container">
-            <h1>Fruit Quiz</h1>
+            <h1>Vegetable Quiz Game</h1>
+         <center><em>Created by: Jeny Pentecase</em></center>
+         <br>
             <div class="game-info">
                 Identify the fruits to test your knowledge
             </div>
@@ -247,7 +250,7 @@ if ($result) {
                     <td><?php echo $rank++; ?></td>
                     <td><?php echo htmlspecialchars($score->username); ?></td>
                     <td><?php echo $score->score; ?>/10</td>
-                    <td><?php echo $score->time; ?>s</td>
+                    <td><?php echo $score->time; ?> seconds</td>
                 </tr>
                 <?php endforeach; ?>
             </table>
@@ -260,7 +263,7 @@ if ($result) {
                 Score: <?php echo $_SESSION['final_score']; ?>/10
             </div>
             <div class="actions">
-                <a href="index.php" class="button">Try Again</a>
+                <a href="index.php" class="button">Play Again</a>
             </div>
         </div>
 
